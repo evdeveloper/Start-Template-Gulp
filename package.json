@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "node-normalize-scss": "^8.0.0",
+    "slick-carousel": "^1.8.1",
     "svg4everybody": "^2.1.9"
   }
 }

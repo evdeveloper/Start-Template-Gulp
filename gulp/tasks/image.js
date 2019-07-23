@@ -1,6 +1,6 @@
 let imagemin = require('gulp-imagemin'),
     imageminJpegRecompress = require('imagemin-jpeg-recompress'),
-    pngquant = require('imagemin-pngquant'),
+    // pngquant = require('imagemin-pngquant'),
     cache = require('gulp-cache'),
     imgPATH = {
         "input": ["./dev/static/images/**/*.{png,jpg,gif,svg}",
@@ -26,8 +26,8 @@ module.exports = function () {
                     quality: 'medium'
                 }),
                 imagemin.svgo(),
-                imagemin.optipng({optimizationLevel: 3}),
-                pngquant({quality: '65-70', speed: 5})
+                imagemin.optipng({optimizationLevel: 3})
+                // pngquant({quality: '65-70', speed: 5})
             ], {
                 verbose: true
             })))

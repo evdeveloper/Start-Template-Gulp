@@ -10,7 +10,8 @@ html {
 
 body {
   height: 100%;
-  font-family: $base-fonts;
+  font-family: $CorsSemiBold;
+  background-color: $color-bg-page;
 }
 
 h1, h2, h3, h4, h5, h6 { margin: 0; }
@@ -44,14 +45,30 @@ button { outline: none; }
 *, *:before, *:after { box-sizing: border-box; }
 
 
-.content { flex: 1 0 auto; }
+.content {
+  flex: 1 0 auto;
+  @media screen and (max-width: $tablet-big){ overflow: hidden; }
+}
+
 
 .container {
   margin: 0 auto;
-  padding: 0 300px;
+  max-width: 1260px;
+  padding: 0 15px;
   width: 100%;
+  &.banner-media--middle {
+    @media screen and (max-width: $tablet-middle){ max-width: 100%; }
+    @media screen and (max-width: $tablet-mini){ padding: 0;}
+  }
 
+}
 
+.container__new {
+  max-width: 1310px;
+  margin: auto;
+  width: 100%;
+  padding: 0 15px;
+  @media screen and (max-width: $tablet-middle){ padding: 0 15px; }
 }
 
 //Модули
